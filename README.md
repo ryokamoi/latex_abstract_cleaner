@@ -1,4 +1,4 @@
-# Abstract Conversion Tool
+# LaTeX Abstract Cleaner
 
 A Python utility for converting LaTeX abstracts to clean, readable text format for academic paper submissions to arXiv and OpenReview. The tool removes LaTeX commands, comments, and applies custom replacements to ensure your abstract displays correctly on these platforms.
 
