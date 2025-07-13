@@ -1,7 +1,8 @@
 import re
 import csv
 
-if __name__ == "__main__":
+
+def main():
     with open("original.txt", "r") as f:
         abstract = f.read()
 
@@ -23,7 +24,7 @@ if __name__ == "__main__":
     # remove comments (row after %)
     abstract = re.sub(r"%.*", "", abstract)
     
-    # remove texts like \rui{} and \ryo{}
+    # remove texts like \function{}
     # but do not remove \url{}
     abstract = re.sub(r'\\(?!url\b)\w+\{.*?\}', "", abstract)
     
@@ -46,4 +47,7 @@ if __name__ == "__main__":
     
     with open("converted.txt", "w") as f:
         f.write(abstract)
-    
+
+
+if __name__ == "__main__":
+    main()
